@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pinker Auto Scroll m.Facebook</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #wrapper {
+            width: 400px;
+        }
+        
+        .glyphicon-heart {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container-fluid">
+            <h4>
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Pinker Auto Scroll m.Facebook
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+            </h4>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Mã tài khoản của bạn">
+            </div>
+
+            <div class="form-group">
+                <label for="keywords">Danh sách từ khóa: <small>(cách nhau bởi dấu ,)</small></label>
+                <textarea class="form-control" rows="5" id="keywords" placeholder="Thí chủ vui lòng nhập từ khóa... VD : vietcombank, techcombank, vietinbank ..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="radio-inline">
+                        <input type="radio" name="type" value="latest">Latest
+                    </label>
+
+                <label class="radio-inline">
+                        <input type="radio" name="type" value="top">Top
+                    </label>
+            </div>
+
+            <div class="form-group">
+                <small>Thời gian chạy / 1 keyword (tính bằng giây "s"):</small>
+                <input type="text" class="form-control" id="time" value="10" placeholder="VD: 10">
+            </div>
+
+            <div class="form-group">
+                <small>Thời gian nghỉ giữa 2 lần chạy (tính bằng giây "s"):</small>
+                <input type="text" class="form-control" id="pause" value="60" placeholder="VD: 60">
+            </div>
+
+            <div class="form-group">
+                <small>Thời gian đợi load tin mới (tính bằng mili giây "ms", 1000ms = 1s):</small>
+                <input type="text" class="form-control" id="wait" value="3000" placeholder="VD: 3000ms = 3s">
+            </div>
+
+            <div class="form-group">
+                <small>Loại cookie (root1, root2, user1, user2 ...):</small>
+                <input type="text" class="form-control" id="type_cookie" value="user" placeholder="Các loại cookie: root, user, ...">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-sm btn-success" id="start">
+                        <span class="glyphicon glyphicon-check" aria-hidden="true"></span> 
+                        Bắt đầu !
+                    </button>
+                <button class="btn btn-sm btn-warning" id="stop">
+                        <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+                        Nghỉ chút !
+                    </button>
+                <button class="btn btn-sm btn-primary" id="continue">
+                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                        Tiếp tục !
+                    </button>
+                <button class="btn btn-sm btn-danger" id="clear">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        Reset !
+                    </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/popup.js"></script>
+
+</html>

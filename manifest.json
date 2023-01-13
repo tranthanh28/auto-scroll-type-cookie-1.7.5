@@ -1,0 +1,26 @@
+{
+    "name": "MDung Auto Scroll Type Cookie m.Facebook",
+    "description": "Nâng cấp : Thêm time stop 01-06h sáng",
+    "version": "1.7.5",
+    "author": "manhdung",
+    "icons": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+    },
+    "browser_action": {
+        "default_title": "Pinker Auto Scroll m.Facebook",
+        "default_icon": "logo.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["https://*.facebook.com/*", "tabs", "storage", "unlimitedStorage", "declarativeContent", "webRequest", "webRequestBlocking", "webNavigation", "management"],
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": ["http://*.facebook.com/*", "https://*.facebook.com/*", "https://monitaz.com/*", "https://*.monitaz.com/*"],
+        "js": ["js/jquery.min.js", "js/content.js"]
+    }],
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "devtools_page": "devtools.html"
+}
